@@ -13,8 +13,8 @@ ui <- fluidPage(
     ## and number of observations to generate. Note the use of the
     ## br() element to introduce extra vertical spacing
 
-    sidebarLayout(
-        sidebarPanel(
+    sidebarLayout(     # Global layout 
+        sidebarPanel(  # Contents for the side bar
             selectInput("xvar", label = h3("Select x variable"),
                         choices = vars,
                         selected = 1),
@@ -25,7 +25,7 @@ ui <- fluidPage(
                             
             br(),br()
        ),
-       mainPanel(
+       mainPanel(      # What is in the main panel
             plotOutput("plot", height="600")
             )
     )
